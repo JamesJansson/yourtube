@@ -38,7 +38,7 @@ if(process.env.NODE_ENV === 'production') {
   });
 }
 
-app.use(cors());
+// app.use(cors()); // use to allow other domains to make requests. Think about security issues: a simple setting will allow any website to make any req to any route below this.
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: true})); //use bodyParser for request and parsing info
 app.use(bodyParser.json());
